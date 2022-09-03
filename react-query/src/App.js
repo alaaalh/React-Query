@@ -2,7 +2,8 @@ import {BrowserRouter as Router , Routes , Route , Link} from "react-router-dom"
 import HomePage from "./components/Home.page";
 import RQsuperHeriosPage from "./components/RQsuperHerios.page";
 import SuperHeriosPage from "./components/SuperHerios.page";
-import {QueryClientProvider , QueryClient} from 'react-query'
+import {QueryClientProvider , QueryClient} from 'react-query';
+import {ReactQueryDevtools} from 'react-query/devtools'
 
 const queryClient = new QueryClient()
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/" exact element={<HomePage/>}/>
       </Routes>  
     </Router>
+    <ReactQueryDevtools initalIsOpen={false} position='bottom-right'/>
     </QueryClientProvider>
   );
 }
@@ -47,3 +49,9 @@ export default App;
 //make instace from queryClient
 //add this a client={queryClient}
 //now we have access from all method in react query
+
+
+//to use react-query-devtools
+//import it 
+//add it before provider
+//give insital prop
