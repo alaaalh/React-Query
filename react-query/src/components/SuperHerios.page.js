@@ -14,13 +14,14 @@ export default function SuperHeriosPage() {
   const onFaild = () => {
     console.log("the fetch data is faild");
   };
-  
+
   const { isLoading, data, isError, error, isFetched, refetch } = useQuery(
     "super-hero",
     fetchData,
     {
       onSuccess,
       onFaild,
+      staleTime: 30000
     }
   );
 

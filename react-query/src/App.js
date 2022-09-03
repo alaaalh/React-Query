@@ -55,3 +55,9 @@ export default App;
 //import it 
 //add it before provider
 //give insital prop
+
+
+//every query result is catched for five minutes
+//it make react query by default faster
+//we use query staltime to reduce number of request
+//pulling (outomatic refatching) by refetchInterval
