@@ -3,9 +3,11 @@ import HomePage from "./components/Home.page";
 import RQsuperHeriosPage from "./components/RQsuperHerios.page";
 import SuperHeriosPage from "./components/SuperHerios.page";
 import {QueryClientProvider , QueryClient} from 'react-query'
+
+const queryClient = new QueryClient()
 function App() {
   return (
-    <QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
     <Router>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="collapse navbar-collapse" id="navbarNav">
@@ -42,3 +44,6 @@ export default App;
 //install react-query 
 //import QueryClientProvider
 //wrap application in it
+//make instace from queryClient
+//add this a client={queryClient}
+//now we have access from all method in react query
